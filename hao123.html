@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year 8 Science Lesson: Energy A1
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <style>
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        button {
+            transition: transform 0.2s, background-color 0.3s;
+            position: relative;
+            z-index: 0;
+        }
+        
+        button:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 0.2);
+            z-index: 1;
+        }
+        
+        .highlight {
+            background-color: rgba(66, 153, 225, 0.3);
+            border-left: 4px solid #2b6cb0;
+            padding-left: 1rem;
+        }
+
+        .fixed-div {
+            border-radius: 7px;
+        position: fixed; /*  */
+        top: 20%; /* 20%  */
+        right: 10px; /*  10px */
+        width: 150px; /*  */
+        height: 200px; /*  */
+        background-color: #0c70db7a; /*  */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*  */
+        text-align: center; /*  */
+        line-height: 200px; /*  */
+        font-size: 20px; 
+        color: #ffffff97; 
+        transition: transform 0.3s, background-color 0.7s;
+        }
+
+        .fixed-div:hover{
+            color: white;
+            transform: scale(1.1);
+            background-color: #d08000;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            const targetSection = document.getElementById(sectionId);
+            targetSection.style.display = 'block';
+            targetSection.classList.add('fade-in');
+        }
+        
+        function highlightElementAndShowSection(elementId, sectionId) {
+            showSection(sectionId);
+            document.querySelectorAll('.highlight').forEach(el => {
+                el.classList.remove('highlight');
+            });
+            const element = document.getElementById(elementId);
+            element.classList.add('highlight');
+            window.scrollTo({ top: element.offsetTop - 100, behavior: 'smooth' });
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('overview');
+        });
+    </script>
+</head>
+<body class="bg-gradient-to-br from-blue-200 to-purple-300 font-sans h-full">
+    <header class="bg-blue-800 text-white p-6 shadow-md">
+        <h1 class="text-4xl text-center font-bold mb-2">Year 8 Science Lesson: Energy A1</h1>
+        <nav class="mt-4 text-center">
+            <button onclick="showSection('overview')" class="text-white hover:underline mx-2 py-2 px-4 rounded bg-blue-700">Overview</button>
+            <button onclick="showSection('intellectual-quality')" class="text-white hover:underline mx-2 py-2 px-4 rounded bg-blue-700">Intellectual Quality</button>
+            <button onclick="showSection('learning-environment')" class="text-white hover:underline mx-2 py-2 px-4 rounded bg-blue-700">Quality Learning Environment</button>
+            <button onclick="showSection('significance')" class="text-white hover:underline mx-2 py-2 px-4 rounded bg-blue-700">Significance</button>
+            <button onclick="showSection('reflection')" class="text-white hover:underline mx-2 py-2 px-4 rounded bg-blue-700">Reflection</button>
+            <button onclick="showSection('references')" class="text-white hover:underline mx-2 py-2 px-4 rounded bg-blue-700">References</button>
+            
+        </nav>
+    </header>
+        <a href="index.html" class="fixed-div">MOVE TO A2</a>
+    <main class="container mx-auto mt-12 p-6 bg-white rounded-lg shadow-xl">
+        <section id="overview" class="mb-8">
+            <h2 class="text-3xl font-bold mb-6">Overview</h2>
+            <p>In this Year 8 science lesson on "Energy," the objectives are to engage students, check prior knowledge, and provide a basic understanding of the topic. Key elements from the Quality Teaching Model (QTM) include:</p>
+            <ul class="list-disc pl-8 space-y-4">
+                <li><strong>Metalanguage:</strong> <button onclick="highlightElementAndShowSection('metalanguage', 'intellectual-quality')" class="text-blue-700 underline">Using scientific terms.</button></li>
+                <li><strong>Substantive Communication:</strong> <button onclick="highlightElementAndShowSection('substantive-communication', 'intellectual-quality')" class="text-blue-700 underline">Encouraging meaningful discussions.</button></li>
+                <li><strong>Engagement:</strong> <button onclick="highlightElementAndShowSection('engagement', 'learning-environment')" class="text-blue-700 underline">Active participation.</button></li>
+                <li><strong>Social Support:</strong> <button onclick="highlightElementAndShowSection('social-support', 'learning-environment')" class="text-blue-700 underline">Creating a supportive environment.</button></li>
+                <li><strong>Inclusivity:</strong> <button onclick="highlightElementAndShowSection('inclusivity', 'learning-environment')" class="text-blue-700 underline">Accommodating all learners.</button></li>
+                <li><strong>Background Knowledge:</strong> <button onclick="highlightElementAndShowSection('background-knowledge', 'significance')" class="text-blue-700 underline">Building on what students already know.</button></li>
+            </ul>
+        </section>
+        
+        <section id="intellectual-quality" class="mb-8" style="display: none;">
+            <h2 class="text-3xl font-bold mb-6">Dimension 1: Intellectual Quality</h2>
+            <div id="metalanguage" class="mt-4 highlight"><strong>Metalanguage: Using scientific terms.</strong>
+                <p>In a diverse classroom, certain vocabulary can be challenging for some students. However, when providing a modified curriculum for students, it is important to retain the use of metalanguage. (Hu, 2010) As this is the first lesson of the unit, some terms will inevitably feel unfamiliar to students. For example, in everyday language, the term "thermal energy" can also be referred to as "heat energy," but there are subtle differences between the two in scientific definitions. The teaching of metalanguage in science courses aims to equip students with precise and scientific expressions, while at the same time, through explanations of the metalanguage with simple everyday languages or multimedia methods, helping them connect the terminology with real-life situations and descriptions. (Hu, 2010)</p>
+                <img src="meta1.png" alt="Metalanguage explanation in the classroom" class="mt-4">
+                <img src="meta2.png" alt="Activity analysis in lesson plan" class="mt-4">
+                
+            </div>
+            <div id="substantive-communication" class="mt-4 highlight"><strong>Substantive Communication: Encouraging meaningful discussions.</strong>
+                <p>Substantive Communication aims to make students' thinking valuable and visible. (Intellectual Rigour, n.d.) In this lesson, the use of facilitating questions was intended to extend students' discussions, prompting them to elaborate on their thoughts and provide evidence when expressing their viewpoints, making the discussion deeper and more meaningful. At the same time, by encouraging students to share their perspectives, the goal was to cultivate the ability to reflect further by comparing differences between various opinions. (Main, 2017, p. 296) Facilitating Substantive Communication also allows the teacher to better understand students' prior knowledge and identify potential misconceptions, which helps in adjusting the focus of subsequent teaching through feedforward content. For students, continuous multi-directional interaction can stimulate deep thinking and foster curiosity about the unknown, leading to knowledge acquisition that is not passively received from external definitions but actively absorbed through exploration and reflection.</p>
+                <img src="Substantive Communication1.png" alt="Activity analysis in lesson plan" class="mt-4">
+                <img src="Substantive Communication2.png" alt="Activity analysis in lesson plan" class="mt-4">
+                
+            </div>
+        </section>
+        
+        <section id="learning-environment" class="mb-8" style="display: none;">
+            <h2 class="text-3xl font-bold mb-6">Dimension 2: Quality Learning Environment</h2>
+            <div id="engagement" class="mt-4 highlight"><strong>Engagement: Active participation.</strong>
+                <p>For most teenagers, direct and monotonous learning can be difficult to stay focused on and engaged with, largely due to the characteristics of this age group. Making a lesson interesting is crucial for middle school students' learning. (Main, 2017, pp. 52–85) In this lesson, we designed an outdoor activity where students could leave the classroom, enjoy the sunshine and breeze, and observe places where energy is present around them. Compared to sitting in the classroom thinking about the same topic, students showed greater enthusiasm and participation during the outdoor activity, which directly contributed to the quality of subsequent discussions. For the first lesson of this unit, allowing students to engage with the topic and get a general understanding of the content proved to be more meaningful than explicit teaching, laying the foundation for deeper learning in future lessons. (Stein, Miness, & Kintz, 2018, pp. 2–10)</p>
+                <img src="Engagement 1.png" alt="Worksheet showing student engagement" class="mt-4">
+            </div>    
+            <div id="social-support" class="mt-4 highlight"><strong>Social Support: Creating a supportive environment.</strong>
+                <p>The learning environment is a key factor in engaging students in learning. Therefore, understanding students before starting instruction helps create a supportive learning environment. (Edge, Reynolds, & O'Toole, 2014, pp. 212–221) In this lesson, the students came from different countries, different ethnic backgrounds, and had moderate levels of social capital. This diversity means that students may have significantly different ways of thinking and learning habits. To address this, students were grouped randomly to ensure diversity within each group, thereby fostering diverse communication. During group discussions and activities, the teacher continuously moved between groups, monitoring and ensuring that the learning environment remained inclusive and supportive.</p>
+                
+                <img src="social support.png" alt="Worksheet showing student engagement" class="mt-4">
+            </div>
+        </section>
+        
+        <section id="significance" class="mb-8" style="display: none;">
+            <h2 class="text-3xl font-bold mb-6">Dimension 3: Significance</h2>
+            <div id="inclusivity" class="mt-4 highlight"><strong>Inclusivity: Accommodating all learners.</strong>
+                <p>Inclusive lesson content directly affects whether students can actively participate in class activities and understand the learning material. (Florian, 2015) For example, the relationship between photovoltaic glass and solar energy might be a completely unfamiliar concept for some students. This means that using such examples would be unfair and inappropriate. Therefore, the lesson was designed with inclusivity in mind, ensuring that the examples used in instruction were universally relatable, so that no student would be left out of discussions due to a lack of familiarity with the content. All students, regardless of their background or other factors, should be able to learn in a fair and inclusive environment.</p>
+                <img src="Inclusivity.png" alt="Inclusivity in education" class="mt-4">
+                
+            </div>
+            <div id="background-knowledge" class="mt-4 highlight"><strong>Background Knowledge: Building on what students already know.</strong>
+                <p>Combining background knowledge with current learning content can greatly enhance students' understanding of what they are learning and provide them with the ability to solve real-world problems, especially when integrating knowledge across different subjects. (Main, 2017, pp. 190-207) In this lesson, we connected students' understanding of energy from their everyday experiences with textbook knowledge. For example, by asking questions like "What do you think energy is?" and "What forms of energy exist in the kitchen?", we helped students better understand the learning content in a more concrete way. At the same time, these questions provided insight into students' prior knowledge, allowing us to adjust subsequent lessons more effectively.</p>
+                <img src="Background Knowledge.png" alt="Background Knowledge Example" class="mt-4">
+                
+            </div>
+        </section>
+
+        <section id="references" class="mt-12" style="display: none;">
+            <h2 class="text-3xl font-bold mb-6">References</h2>
+            <ul class="list-disc pl-8 space-y-4">
+                <li>Hu, G. (2010). <em>Revisiting the role of metalanguage in L2 teaching and learning</em>. <strong>English Australia Journal</strong>, <em>26</em>(1), 61-70.</li>
+                <li>Intellectual Rigour. (n.d.). Substantive communication. Intellectual Rigour. Retrieved October 27, 2024, from <a href="https://cixelsyd96.wixsite.com/intellectualrigour/substantive-communication" class="text-blue-700 underline">https://cixelsyd96.wixsite.com/intellectualrigour/substantive-communication</a></li>
+                <li>Main, K., & Bryer, N. (2017). <em>Teaching Middle Years: Rethinking curriculum, pedagogy and assessment</em> (Third edition). Routledge. <a href="https://doi.org/10.4324/9781003117780" class="text-blue-700 underline">https://doi.org/10.4324/9781003117780</a></li>
+                <li>Stein, K. C., Miness, A., & Kintz, T. (2018). <em>Teachers' cognitive flexibility on engagement and their ability to engage students: A theoretical and empirical exploration</em>. <strong>Teachers College Record</strong>, <em>120</em>(060308), 1-38. <a href="https://doi.org/10.1177/016146811812000607" class="text-blue-700 underline">https://doi.org/10.1177/016146811812000607</a></li>
+                <li>Edge, K., Reynolds, R., & O'Toole, M. (2014). <em>Quality teaching: 'Classroom pedagogical alignment' and why teachers teach as they do</em>. <strong>International Journal of Pedagogies & Learning</strong>, <em>9</em>(3), 211–227. <a href="https://doi.org/10.1080/22040552.2014.11472832" class="text-blue-700 underline">https://doi.org/10.1080/22040552.2014.11472832</a></li>
+                <li>Florian, L. (2015). <em>Inclusive pedagogy: A transformative approach to individual differences but can it help reduce educational inequalities?</em> <strong>Scottish Educational Review</strong>, <em>47</em>(1), 5-14.</li>
+            </ul>
+        </section>
+
+        <section id="reflection" class="mb-8" style="display: none;">
+            <h2 class="text-3xl font-bold mb-6">Reflection</h2>
+            <p>
+                By reviewing the feedback after the lesson, I identified two key issues that need to be addressed for the second lesson.
+            </p>
+            <p><strong>Issue 1:</strong> The concept of "work" was mentioned while explaining energy, but it was not clearly defined. This caused confusion for some students with varying levels of prior knowledge. Instead of aiding their understanding of energy, the mention of work created unnecessary complexity. In a typical middle-year classroom, this could result in students who lack a strong grasp of prerequisite knowledge struggling to connect new content with their prior understanding, thereby increasing their difficulty in comprehension. This issue happened due to an overestimation of and incorrect assumptions about the students' prior knowledge.
+            </p>
+            <img src="feedback1.png" alt="Worksheet showing student engagement" class="mt-4">
+            <p><strong>Video clip - Definition of 'work' as involved in teaching the concept of energy.</strong>
+            <video controls width="640" height="360">
+                <source src="https://d3qkhxr8l2c5ex.cloudfront.net/2024-11-27%2003-58-15.mp4" type="video/mp4">
+                您的浏览器不支持视频标签。
+            </video>
+
+            <p><strong>Issue 2:</strong> The first lesson's structure was overly focused on explicit teaching, providing insufficient opportunities for students to discuss and express their ideas. For example, after the outdoor activity, students were directed to complete a worksheet and then transitioned directly into the teaching of definitions, without sufficient time to share or discuss their findings. This design led to some students losing focus during the extended period of explicit instruction, which can be particularly problematic for adolescents. Moreover, the lack of opportunities for interaction and self-reflection after the activity hindered students from exchanging ideas, engaging in critical thinking, and effectively internalizing the knowledge gained from the activity.
+            </p>
+            <img src="feedback2.png" alt="Worksheet showing student engagement" class="mt-4">
+            <h3 class="text-2xl font-bold mt-6 mb-4">Planned Changes for the Second Lesson</h3>
+            <p><strong>Change 1:</strong> We will begin the lesson with a supplemental explanation of the definition of work, connecting it to the concept of energy introduced in the previous lesson. This aims to help students who were confused in the first lesson better understand the relationship between these concepts. Moving forward, we will also be more cautious in our lesson planning, ensuring a deeper understanding of students' prior knowledge to avoid similar issues.
+            </p>
+            <p><strong>Change 2:</strong> We will reduce the proportion of explicit teaching in favor of providing more opportunities for students to share ideas and engage in discussion. A picture grouping activity (Activity 2) has been designed for the second lesson, allowing more student-driven learning. In this activity, students will work in groups to match images with energy types, discuss their perspectives with peers, and present their findings to the class. This will provide opportunities for peer-to-peer interaction, helping them internalize knowledge through critical thinking and collaborative learning. The teacher will act as a facilitator and promoter of deeper thinking, encouraging discussions with open-ended questions, correcting student responses to ensure academic rigor, and reinforcing key concepts through repetition to support long-term memory formation.
+            </p>
+        </section>
+        
+        
+    </main>
+</body>
+</html>

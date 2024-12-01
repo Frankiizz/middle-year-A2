@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year 8 Science Lesson: Energy A2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <style>
+        
+        li{
+            font-size: 1.2rem;
+            margin-left: 1rem;
+            margin-bottom: 1rem;
+            margin-right: 5rem;
+        }
+        p{
+            font-size: 18px;
+            margin-bottom: 1rem;
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        button {
+            transition: transform 0.2s, background-color 0.3s;
+            position: relative;
+            z-index: 0;
+        }
+        
+        button:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 101, 70, 0.638);
+            z-index: 1;
+        }
+        
+        .highlight {
+            background-color: #ffe49fb3;
+            border-left: 4px solid #ffa20d;
+            padding-left: 1rem;
+        }
+
+        .fixed-div {
+        border-radius: 7px;
+        position: fixed; /*  */
+        top: 20%; /* 20%  */
+        right: 10px; /*  10px */
+        width: 150px; /*  */
+        height: 200px; /*  */
+        background-color: #c3780077; /*  */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*  */
+        text-align: center; /*  */
+        line-height: 200px; /*  */
+        font-size: 20px; 
+        color: #ffffff96; 
+        transition: transform 0.3s, background-color 0.7s;
+        }
+
+        .fixed-div:hover{
+            color: #ffffff;
+            transform: scale(1.1);
+            background-color: #0c70db;
+        }
+
+        .imgbuju{
+            display: grid;
+            width: 100%; /* 确保容器宽度占满父元素 */
+            grid-template-columns: 50% 50%; /* 定义两列布局 */
+            justify-items: center; /* 子元素顶部对齐 */
+        }
+
+        img {
+            transition: transform 0.6s ease; /* 添加平滑动画 */
+        }
+
+        /* 鼠标悬浮时变大 */
+        img:hover {
+            transform: scale(1.3); /* 图片放大 1.2 倍 */
+            cursor: pointer; /* 鼠标变成手型 */
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            const targetSection = document.getElementById(sectionId);
+            targetSection.style.display = 'block';
+            targetSection.classList.add('fade-in');
+        }
+        
+        function highlightElementAndShowSection(elementId, sectionId) {
+            showSection(sectionId);
+            const element = document.getElementById(elementId);
+            window.scrollTo({ top: element.offsetTop - 100, behavior: 'smooth' });
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('overview');
+        });
+    </script>
+</head>
+<body class="bg-gradient-to-br from-yellow-300 to-red-300 font-sans h-full">
+    <header class="bg-yellow-600 text-white p-6 shadow-md fixed top-0 left-0 w-full z-50">
+        <h1 class="text-4xl text-center font-bold mb-2">Year 8 Science Lesson: Energy A2</h1>
+        <nav class="mt-4 text-center">
+            <button onclick="showSection('overview')" class="text-white hover:underline mx-2 py-2 px-4 rounded bg-yellow-500">Overview </button>
+            <button onclick="showSection('intellectual-quality')" class="text-white hover:underline mx-2 py-2 px-4 rounded bg-yellow-500"> Intellectual Quality </button>
+            <button onclick="showSection('learning-environment')" class="text-white hover:underline mx-2 py-2 px-4 rounded bg-yellow-500">Quality Learning Environment </button>
+            <button onclick="showSection('significance')" class="text-white hover:underline mx-2 py-2 px-4 rounded bg-yellow-500">Significance </button>
+            <button onclick="showSection('reflection')" class="text-white hover:underline mx-2 py-2 px-4 rounded bg-yellow-500">Feedback to Peers</button>
+            <button onclick="showSection('references')" class="text-white hover:underline mx-2 py-2 px-4 rounded bg-yellow-500"> References </button>
+            
+        </nav>
+    </header>
+        <a href="hao123.html" class="fixed-div">BACK TO A1
+        </a>
+<!-- 下面是第一部分 -->
+    <main class="container mx-auto mt-40 p-6 bg-white rounded-lg shadow-xl">
+        <section id="overview" class="mb-8">
+            <h2 class="text-3xl font-bold mb-6">Overview</h2>
+            <p>In this Year 8 science lesson on "Energy," the objectives are to engage students, check prior knowledge, and provide a basic understanding of the topic. Key elements from the Quality Teaching Model (QTM) include:</p>
+            <ul class="list-disc pl-8 space-y-4">
+                <li><strong>Deep understanding: </strong> <button onclick="highlightElementAndShowSection('metalanguage', 'intellectual-quality')" class="text-blue-700 underline">Fostering meaningful comprehension.</button></li>
+                <li><strong>Substantive Communication:</strong> <button onclick="highlightElementAndShowSection('substantive-communication', 'intellectual-quality')" class="text-blue-700 underline">Encouraging meaningful discussions.</button></li>
+                <li><strong>Engagement:</strong> <button onclick="highlightElementAndShowSection('engagement', 'learning-environment')" class="text-blue-700 underline">Active participation.</button></li>
+                <li><strong>Social Support: </strong> <button onclick="highlightElementAndShowSection('social-support', 'learning-environment')" class="text-blue-700 underline">Creating a supportive environment.</button></li>
+                <li><strong>Background Knowledge: </strong> <button onclick="highlightElementAndShowSection('inclusivity', 'learning-environment')" class="text-blue-700 underline">Building on what students already know.</button></li>
+                <li><strong>Connectedness: </strong> <button onclick="highlightElementAndShowSection('background-knowledge', 'significance')" class="text-blue-700 underline">Relating learning to real-world contexts and students’ lives outside school.</button></li>
+            </ul>
+        </section>
+<!-- 下面是第二部分 -->
+        <section id="intellectual-quality" class="mb-8" style="display: flex;">
+            <h2 class="text-3xl font-bold mb-6">Dimension 1: Intellectual Quality</h2>
+                    <div id="metalanguage" class="mt-4 highlight" ><strong style="font-size: 1.4rem;">Deep Understanding: Fostering meaningful comprehension.</strong>
+                        <p>The second activity in the second lesson effectively demonstrated the use of the Deep Understanding element from the QTM framework. This activity provided students with images of various real-life scenarios <b><u>As shown in Image 1& 2</u></b>
+                            . Students were first asked to identify what the image depicted and then determine whether it represented kinetic energy, potential energy, or both, based on the methods for distinguishing these types of energy introduced earlier in the lesson. Students indicated their answers by moving to specific areas of the classroom, from one wall to the other, representing their chosen answers <b><u>As shown in Video 1</u></b>. Throughout this process, students reinforced their understanding of the concepts by explaining to others how they determined whether an example involved kinetic or potential energy. This was further supported by teacher-guided questions and feedback.
+                        </p>
+                        <p>
+                            In practice, I observed that this activity significantly enhanced students’ ability to differentiate between types of energy. They not only remembered the definitions of kinetic and potential energy but were also able to explain, reason, and analyse different scenarios in their own words. This demonstrated a deep conceptual understanding and the ability to flexibly apply these concepts in new contexts.
+                        </p>
+                        <p>
+                            Overall, I believe this element was well implemented, but it lacked opportunities for student collaboration. For future planning and implementation, I propose incorporating group discussions, where students form small teams to collaboratively evaluate each image, debate their judgments, and attempt to reach a consensus. This would encourage deeper dialogue among students and strengthen their communication and critical thinking skills.
+                        </p>
+
+                </div>
+                <div class="imgbuju highlight">
+                    <img src="DU1.png" alt="Metalanguage explanation in the classroom" class="mt-4" style="width: 80%; height: 90%;">
+                    <img src="DU2.png" alt="Activity analysis in lesson plan" class="mt-4" style="width: 80%; height: 90%;">
+                </div>
+
+                <div class="highlight" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <h2 style="font-size: 1.4rem;"><b>Video 1: Deep Understanding - Lesson 2 Picture grouping activity</b></h2>
+                    <video width="80%" height="80%" controls>
+                      <source src="https://d3qkhxr8l2c5ex.cloudfront.net/Lesson 2 picture grouping.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  
+                
+            </div>
+            <div id="substantive-communication" class="mt-4 highlight" style="padding-bottom: 1rem;"><strong style="font-size: 1.4rem;">Substantive Communication: Encouraging meaningful discussions.</strong>
+                <p>In the fourth lesson, we focused on implementing the Substantive Communication element through a class activity. Students were grouped to research, discuss, and collaboratively create an infographic on the concept of energy conservation <b><u>As shown in Image 3& 4</u></b>.
+                    This activity was designed to foster critical thinking and encourage meaningful communication among students and between students and the teacher. Rather than directly providing answers, students engaged in a process that required active interaction and dialogue. To complete the infographic, each group member needed to research specific questions from the template, express their viewpoints, exchange ideas, and reach a conclusion. Compared to simple Q&A or rote memorization, this process involved more thoughtful interaction and higher-quality discussions <b><u>As shown in Video 2</u></b>.
+                    </p>
+                   <p>
+                    The teacher also played a key role in observing and engaging with each group during the activity. By asking open-ended questions such as, “Why do you think so?” or “What evidence supports your perspective?” the teacher encouraged students to think more deeply and ensured they stayed on track. At the end of the activity, the teacher provided feedback on each group’s work and posed follow-up questions. This design ensured that students went beyond merely copying and pasting information; instead, they summarized their findings in their own words after group discussions.
+                   </p> 
+                   <p>
+                    During implementation, students made good use of the recommended resource websites, but some challenges were observed. For example, while students were grouped for collaboration, the lack of clearly defined roles led to superficial participation by some students, with limited deep engagement. To address this, we plan to introduce role assignments in future activities. Each group could have designated roles such as researcher, recorder, questioner, and presenter. Clear role definitions would ensure that every student takes responsibility and actively participates in the discussion, reducing the likelihood of “free riders.”</p>
+                <div class="imgbuju">
+                    <img src="SC1.png" alt="Activity analysis in lesson plan"  style="width: 80%; height: 90%;">
+                <img src="SC2.png" alt="Activity analysis in lesson plan"  style="width: 80%; height: 90%;">
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <h2 style="font-size: 1.4rem;"><b> Video 2: Substantive Communication - Lesson 4 Infographic activity</b></h2>
+                    <video width="80%" height="80%" controls>
+                        <source src="https://d3qkhxr8l2c5ex.cloudfront.net/infographic activity.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+            </div>
+        </section>
+        <!-- 下面是第三部分 -->
+        <section id="learning-environment" class="mb-8" style="display: none;">
+            <h2 class="text-3xl font-bold mb-6">Dimension 2: Quality Learning Environment</h2>
+            <div id="engagement" class="mt-4 highlight" ><strong style="font-size: 1.4rem;">Engagement: Active participation.</strong>
+                <p>In recent lessons, we have strived to create an engaging and high-quality learning environment through various activities. Based on feedback from the second lesson, we found that some students struggled to stay focused and engaged because they felt the teacher-led instruction occupied too much of the lesson, limiting their active participation.
+                    To address this, in the third lesson, we incorporated an online simulation platform that allowed students to explore energy transfer and transformation independently <b><u>As shown in Image 5& 6</u></b>. By enabling students to interact with the simulation and provide their own reflections, we shifted more control of the learning process to the students. The teacher acted as a facilitator and support provider during this activity. Students internalized the lesson content by answering guided questions as they explored the simulation.
+                    However, the implementation revealed areas for improvement. Some students found the simulation and similar resources challenging to navigate, lacking direction and clarity in their exploration. To mitigate this, we could provide clearer guidance and set specific objectives before the activity begins, rather than relying solely on in-progress support in the future. For instance:
+                    </p>
+                    <li style="background-color: #fcb54377;">
+                        Conduct a demonstration of the simulation, highlighting key features and potential pitfalls.
+                    </li>
+                    <li style="background-color: #fcb54377;">
+                        Use a sample walkthrough of the accompanying worksheet to help students understand the goals and expectations.
+                    </li>
+                    <p>These measures would help students with varying levels of familiarity quickly grasp the task and foster higher-quality learning and comprehension.</p>
+                <div class="imgbuju">
+                    <img src="E1.png" alt="Worksheet showing student engagement" class="mt-4" style="width: 80%; height: 90%;">
+                <img src="E2.png" alt="Worksheet showing student engagement" class="mt-4" style="width: 80%; height: 90%;">
+                </div>
+            </div>    
+            <div id="social-support" class="mt-4 highlight" style="padding-bottom: 1rem;"><strong style="font-size: 1.4rem;">Social Support: Creating a supportive environment.</strong>
+                <p>To better integrate students into the classroom and encourage exploration, social support plays a critical role. <b><u>As demonstrated in Video 3</u></b>, during the introduction to the fourth online lesson, we addressed the challenges students face in an unstructured home environment, such as maintaining focus. Support and care were provided to help students transition smoothly into a learning mindset. </p>
+                <p>
+                    Additionally, in the first activity of the fourth lesson, as shown in <b><u>image 7</u></b>, we recognized the challenges posed by open-ended tasks that required advanced information retrieval skills and deeper knowledge. To address this, we pre-assigned groups, mixing students of different ability levels to foster peer teaching and interaction. These measures effectively supported students with varying abilities, enabling them to engage in the class and complete the tasks successfully.
+                </p>
+                <p>
+                    From observations during the activity, students engaged in collaborative learning and meaningful multi-directional communication. However, feedback revealed areas for improvement. For example:
+                </p>    
+                <li style="background-color: #fcb54377;">
+                    The current activity focused primarily on within-group interaction, with limited opportunities for inter-group exchanges. This restricted students’ exposure to diverse perspectives and information. Although there was a whole-class presentation and feedback session at the end, students lacked opportunities to express their ideas directly to other groups during the activity.
+                </li>
+                <li style="background-color: #fcb54377;">
+                    While pre-assigned groups facilitated peer teaching, the activity did not provide personalized resources to support high-achieving students or those struggling.
+                </li>
+                <p>
+                    To improve future planning, I propose the following adjustments:
+                </p>
+                <li style="background-color: #fcb54377;">
+                    Introduce cross-group discussions or debates to promote a broader exchange of ideas.
+                </li>
+                <li style="background-color: #fcb54377;">
+                    Provide differentiated resources, such as modified tasks for struggling students and extended curriculum challenges for advanced learners, to better cater to individual needs.
+                </li>
+
+                <div class="imgbuju">
+                    <img src="SS1.png" alt="Worksheet showing student engagement" class="mt-4" style="width: 80%; height: 90%;">
+                    <div>
+                        <h2 style="font-size: 1.4rem;"><b> Video 3: Social support - Lesson 4 Greeting and warm-up</b></h2>
+                        <video width="90%" height="100%" controls>
+                            <source src="https://d3qkhxr8l2c5ex.cloudfront.net/l4 greeting.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- 下面是第四部分 -->
+        <section id="significance" class="mb-8" style="display: none;">
+            <h2 class="text-3xl font-bold mb-6">Dimension 3: Significance</h2>
+            <div id="inclusivity" class="mt-4 highlight" style="padding-bottom: 2rem;"><strong style="font-size: 1.4rem;">Background Knowledge: Building on what students already know.</strong>
+                <p>By leveraging background knowledge, we connected the learning content to concepts familiar to students, aiding their memory and understanding <b><u>As shown in the image 8</u></b>. For example, in the third and fourth lessons on energy, students often struggled to distinguish between the concepts of transfer and transformation. To address this, we used Transformers as a relatable example to help students differentiate between energy transfer and energy transformation <b><u>As shown in the top half of Image 8 and Video 4</u></b>. For middle school students, Transformers are a widely recognized reference. By associating the transformation process with the Transformers, students could easily remember this concept.
+                    As a result, most students successfully distinguished between energy transfer and energy transformation using the Transformers example. Additionally, they were able to naturally recall the meanings of both terms. </p>
+                    <p>
+                        However, we identified areas for improvement.
+                    </p>
+                    <li style="background-color: #fcb54377;">
+                        1. Limited interest or familiarity: Some students were not interested in or familiar with Transformers, making this example less effective for them. In future lesson planning, we aim to include more analogies or alternative examples to ensure that all students can benefit from the use of background knowledge.
+                    </li>
+                    <li style="background-color: #fcb54377;">
+                        2. Depth of understanding: While the example helped students distinguish the terms, it lacked immediate reinforcement through other examples. Next time, we plan to integrate activities that combine this distinction with real-life scenarios, further deepening students’ understanding of the two concepts.
+                    </li>
+                   
+                <div class="imgbuju">
+                    <img src="BK1.png" alt="Transformers example." class="mt-4" style="width: 90%; height: 100%;">
+                    <div>
+                        <h2 style="font-size: 1.4rem;"><b> Video 4: Background Knowledge - Transformers example</b></h2>
+                        <video width="90%" height="100%" controls>
+                            <source src="https://d3qkhxr8l2c5ex.cloudfront.net/transfer&transformation.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>  
+                </div>
+                
+                
+            </div>
+            <div id="background-knowledge" class="mt-4 highlight" style="padding-bottom: 1rem;"><strong style="font-size: 1.4rem;">Connectedness: Relating learning to real-world contexts and students’ lives outside school.</strong>
+                <p>In our teaching, we connected previously learned concepts of force with the current topic of energy <b><u>As shown in Video 5</u></b>, ensuring that the concept of energy was not taught in isolation. This approach enabled students to link knowledge learned at different times, enhancing their depth of understanding in the subject. Such connections not only aided in understanding energy but also helped students grasp more complex topics, such as collisions, by building on prior knowledge. </p>
+                    
+                <p>
+                    Additionally, we connected the concept of energy to real-life applications. For instance:
+                </p>
+                <li style="background-color: #fcb54377;">
+                    When discussing energy transfer, we referred to using household appliances <b><u>As shown in Image 9& 10</u></b>.
+                </li>
+                <li style="background-color: #fcb54377;">
+                    When explaining energy transformation, we used the example of a student throwing a basketball, where chemical energy (from food) is converted into kinetic energy to make the throw <b><u>As shown in Image 9 and Video 6</u></b>.
+                </li>
+                <p>
+                    These relatable examples brought the concept of energy closer to real-world contexts, helping students better understand and remember the material.
+                    In practice, connecting real-life scenarios with the content effectively supported student engagement and deepened their understanding. Furthermore, we found something that could improve for future lessons:
+                    <li style="background-color: #fcb54377;">Incorporating physical tools: For example, introducing tangible devices like domino setups to demonstrate energy transfer and transformation in the context of energy conservation. Compared to using simulation software alone, such hands-on activities could further engage students and strengthen their connections to the learning material.</li>
+                    </p>
+                <div class="imgbuju">
+                    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                        <h2 style="font-size: 1.4rem; "><b> Video 5: Connectedness - work and force connection</b></h2>
+                        <video width="90%" height="100%" controls>
+                            <source src="https://d3qkhxr8l2c5ex.cloudfront.net/work&foce.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+    
+                    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                        <h2 style="font-size: 1.4rem; "><b> Video 6: Connectedness - real-life connection</b></h2>
+                        <video width="90%" height="100%" controls>
+                            <source src="https://d3qkhxr8l2c5ex.cloudfront.net/l4 - Trim.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="imgbuju">
+                    <img src="C1.png" alt="Background Knowledge Example" class="mt-4" style="width: 80%; height: 90%;">
+                    <img src="C2.png" alt="Background Knowledge Example" class="mt-4" style="width: 80%; height: 90%;">
+                </div>
+                
+            </div>
+        </section>
+<!-- 上面是第四部分 -->
+        <section id="reflection" class="mb-8" style="display: none;">
+            <h2 class="text-3xl font-bold mb-6">Feedback to Peers</h2>
+            <div id="inclusivity" class="mt-4 highlight">
+                <h3 class="text-xl font-bold mb-4">
+                    What is Effective Feedback:
+                </h3>
+                <strong>
+                    1. Behaviour-Based and Specific Feedback:
+                </strong>
+                <p>
+                    Effective feedback should be behaviour-based and specific, answering questions such as: “What are the goals? What progress has been made towards the goals? What activities need to be undertaken to make better progress?” (Finch, 2021, pp. 48–49). These align with clarifying learning objectives, assessing current progress, and establishing actionable next steps. Such feedback helps the recipient clearly understand their performance, identify specific areas for improvement, and implement practical changes. For example: “During the group discussion session, I noticed that you allocated discussion time for students but didn’t specify that each group should share their results. This may result in some students not actively participating. You could consider asking each group to assign a representative to present their discussion outcomes afterward, which could enhance overall engagement in the class."
+    In contrast, vague feedback, such as "Your classroom organization is good, but student engagement could be improved." lacks clarity and actionable guidance make better progress (Massar, Horner, Kittelman, & Conley, 2023, pp. 170).
+                </p>
+                <strong>
+                    2. Supportive Feedback:
+                </strong>
+                <p>
+                    Good peer feedback should also provide emotional support. Positive and encouraging language can create a psychologically safe environment for the recipient, fostering motivation for improvement and risk-taking (Finch, 2021, pp. 51-54; Hoo, Tan, & Deneen, 2020, pp. 440–442). For example, using a positive tone in feedback forms: “Your efforts in managing the classroom environment are commendable, especially in organizing group activities. Perhaps you could…"
+    This approach not only highlights strengths to boost confidence but also offers constructive suggestions, encouraging motivation for improvement (To, Tan, & Lim, 2023).
+                </p>
+                
+                
+                
+                <div style="display: grid;  width: 100%; gap: 20px; font-family: Arial, sans-serif;">
+                    <!-- 左侧文本区域 -->
+                    <div style="border: 1px solid #8f4500; padding: 20px; border-radius: 8px; background-color: #ffca91; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                        <div style="margin-bottom: 16px;">
+                            <h3 class="text-xl font-bold mb-4">
+                                Improvement in Feedback Skills During the Course:
+                            </h3>
+                            <strong>
+                                From General to Specific Feedback
+                            </strong>
+                            <p style="font-size: 18px;">
+                                As the course progressed, through active participation and learning, I gradually improved my ability to provide effective feedback. Below are examples of how I enhanced these two aspects.
+                            </p>
+                            <strong style="font-size: 24px; color: #000000;">1. Behaviour-Based and Specific Feedback:</strong>
+                        </div>
+                        <div style="margin-bottom: 24px; line-height: 1.6; color: #000000;font-size: 18px;">
+                            <p>
+                                <em>In the early weeks of the course:</em> My feedback was often brief and lacked in-depth explanations or actionable suggestions. Such feedback was evidently ineffective, as recipients found it difficult to improve based on my input. Additionally, this type of feedback might discourage recipients. When a recipient’s performance is not acknowledged or aligned with the feedback provider’s perspective, feelings of resistance and frustration are common.
+                            </p>
+                            <img src="1.png" alt="Feedback example for early weeks" style="width: 48%; height: auto; border-radius: 4px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-top: 12px;">
+                        </div>
+                        <div style="line-height: 1.6; color: #000000;font-size: 18px;">
+                            <p>
+                                <em>In the later weeks of the course:</em> I gradually gained a deeper understanding of effective feedback and its importance. My feedback became more detailed, including explanations, and offered actionable improvement plans.
+                            </p>
+                            <div style="display: flex; gap: 12px; margin-top: 12px;">
+                                <img src="2.png" alt="Feedback example for later weeks" style="width: 48%; height: auto; border-radius: 4px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                                <img src="3.png" alt="Feedback example for later weeks" style="width: 48%; height: auto; border-radius: 4px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                    <div style="display: grid; width: 100%; gap: 20px; font-family: Arial, sans-serif;">
+                        <!-- 左侧文本区域 -->
+                        <div style="border: 1px solid #8f4500; padding: 20px; border-radius: 8px; background-color: #ffca91; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                            <div style="margin-bottom: 16px;">
+                                <strong style="font-size: 18px; color: #000000;font-size: 18px;">2. The Importance of Supportive Feedback:</strong>
+                            </div>
+                            <div style="margin-bottom: 24px; line-height: 1.6; color: #000000;">
+                                <p style="font-size: 18px;">
+                                    <em>Initially:</em> I was unaware of the importance of supportive feedback. Evidence from my early feedback shows that it was often brief, neutral in tone, and lacked encouraging language. Such feedback might make recipients feel that suggestions were task-oriented, lacking empathy and sincerity. This could lead to pressure and frustration.
+                                </p>
+                                <img src="4.png" alt="Early feedback example" style="width: 48%; height: auto; border-radius: 4px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-top: 12px;">
+                            </div>
+                            <div style="line-height: 1.6; color: #000000;font-size: 18px;">
+                                <p style="font-size: 18px;">
+                                    <em>By the end of the course:</em> I recognized the importance of supportive feedback. I began using encouraging and positive language, providing detailed explanations for areas worthy of recognition to convey genuine emotion. For suggestions, I adopted a positive tone and offered detailed explanations, providing recipients with constructive and supportive guidance.
+                                </p>
+                                <img src="5.png" alt="Supportive feedback example" style="width: 50%; height: auto; border-radius: 4px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-top: 12px;">
+                            </div>
+                        </div>
+                    </div>
+                    
+                
+            </div>
+        </section>
+
+
+        <section id="references" class="mt-12" style="display: none;">
+            <h2 class="text-3xl font-bold mb-6">References</h2>
+            <ul class="list-disc pl-8 space-y-4">
+                <li>Finch, M. (2021). <em>Context and cognitive levels of teachers’ written feedback: Probing Hattie and Timperley’s (2007) model in action in feedback for writing</em>. <strong>English in Australia</strong>, <em>56</em>(3), 48–54.</li>
+<li>Hoo, H.-T., Tan, K., & Deneen, C. (2020). <em>Negotiating self- and peer-feedback with the use of reflective journals: An analysis of undergraduates’ engagement with feedback</em>. <strong>Assessment & Evaluation in Higher Education</strong>, <em>45</em>(3), 431–446. <a href="https://doi.org/10.1080/02602938.2019.1665166" class="text-blue-700 underline">https://doi.org/10.1080/02602938.2019.1665166</a></li>
+<li>Massar, M. M., Horner, R. H., Kittelman, A., & Conley, K. M. (2023). <em>Mechanisms of effective coaching: Using prompting and performance feedback to improve teacher and student outcomes</em>. <strong>Journal of Positive Behavior Interventions</strong>, <em>25</em>(3), 169–184. <a href="https://doi.org/10.1177/10983007221133524" class="text-blue-700 underline">https://doi.org/10.1177/10983007221133524</a></li>
+<li>To, J., Tan, K., & Lim, M. (2023). <em>From error-focused to learner-centred feedback practices: Unpacking the development of teacher feedback literacy</em>. <strong>Teaching and Teacher Education</strong>, <em>131</em>, 104185. <a href="https://doi.org/10.1016/j.tate.2023.104185" class="text-blue-700 underline">https://doi.org/10.1016/j.tate.2023.104185</a></li>
+
+            </ul>
+        </section>
+        
+        
+    </main>
+</body>
+</html>
